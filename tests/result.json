@@ -1,0 +1,62 @@
+[
+  {
+    "word": "KHAIII는",
+    "begin": 0,
+    "length": 7,
+    "morphs": [
+      { "lex": "KHAIII", "tag": "SL", "begin": 0, "length": 6 },
+      { "lex": "는", "tag": "JX", "begin": 6, "length": 1 }
+    ]
+  },
+  {
+    "word": "카카오에서",
+    "begin": 8,
+    "length": 5,
+    "morphs": [
+      { "lex": "카카오", "tag": "NNG", "begin": 8, "length": 3 },
+      { "lex": "에서", "tag": "JKB", "begin": 11, "length": 2 }
+    ]
+  },
+  {
+    "word": "개발한",
+    "begin": 14,
+    "length": 3,
+    "morphs": [
+      { "lex": "개발", "tag": "NNG", "begin": 14, "length": 2 },
+      { "lex": "하", "tag": "XSV", "begin": 16, "length": 1 },
+      { "lex": "ㄴ", "tag": "ETM", "begin": 16, "length": 1 }
+    ]
+  },
+  {
+    "word": "세",
+    "begin": 18,
+    "length": 1,
+    "morphs": [{ "lex": "세", "tag": "MM", "begin": 18, "length": 1 }]
+  },
+  {
+    "word": "번째",
+    "begin": 20,
+    "length": 2,
+    "morphs": [
+      { "lex": "번", "tag": "NNB", "begin": 20, "length": 1 },
+      { "lex": "째", "tag": "XSN", "begin": 21, "length": 1 }
+    ]
+  },
+  {
+    "word": "형태소",
+    "begin": 23,
+    "length": 3,
+    "morphs": [{ "lex": "형태소", "tag": "NNG", "begin": 23, "length": 3 }]
+  },
+  {
+    "word": "분석기입니다.",
+    "begin": 27,
+    "length": 7,
+    "morphs": [
+      { "lex": "분석기", "tag": "NNG", "begin": 27, "length": 3 },
+      { "lex": "이", "tag": "VCP", "begin": 30, "length": 1 },
+      { "lex": "ㅂ니다", "tag": "EF", "begin": 30, "length": 3 },
+      { "lex": ".", "tag": "SF", "begin": 33, "length": 1 }
+    ]
+  }
+]

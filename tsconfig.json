@@ -1,0 +1,11 @@
+{
+  "include": ["src/**/*", "bin/*", "types/*"],
+  "compilerOptions": {
+    "noImplicitAny": true,
+    "baseUrl": ".",
+    "paths": {
+      // Actual source mapping defined in webpack.config.js
+      "libkhaiii": ["types/libkhaiii"]
+    }
+  }
+}
