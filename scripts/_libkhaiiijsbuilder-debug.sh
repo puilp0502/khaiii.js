@@ -16,6 +16,7 @@ export HUNTER_ROOT=$BUILDROOT/buildcache/.hunter/
 
 [ ! -d "$BUILDROOT/buildcache/khaiii" ] && git clone https://github.com/puilp0502/khaiii.git
 cd khaiii
+rm -rf build
 mkdir -p build
 cd build
 
