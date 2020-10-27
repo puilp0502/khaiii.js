@@ -35,10 +35,14 @@ module.exports = {
       },
     ],
   },
+  node: {
+    __dirname: false,
+  },
   plugins: [
     new CopyPlugin({
       patterns: [
         { from: "bin/libkhaiii.wasm" }, // dest defaults to compiler.options.output
+        { from: "bin/resources/", to: "resources/"}
       ],
     }),
   ],

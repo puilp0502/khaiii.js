@@ -25,7 +25,7 @@ export async function fetchFromWeb(
   fsRoot: string,
   FS: ModuleFS
 ) {
-  resourceRoot = ensureSlash(resourceRoot, true);
+  resourceRoot = resourceRoot ? ensureSlash(resourceRoot, true) : 'resources/';
   fsRoot = ensureSlash(fsRoot, true);
   const fetches = files.map((fname) =>
     fetch(resourceRoot + fname)

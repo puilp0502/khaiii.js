@@ -1,7 +1,3 @@
-// console.log(__non_webpack_require__);
-
-// const fs = __non_webpack_require__('fs');
-
 // Emscripten assigns resulting factory function to module.exports, so we're stuck with require for now
 const libkhaiii = require("../bin/libkhaiii");
 
@@ -11,17 +7,29 @@ import { fetchFromWeb } from "./fs/webfs";
 import { Khaiii, khaiii_morph_t_, khaiii_word_t_ } from "./Khaiii";
 
 type KhaiiiConfig = {
-  resourceProvider: "webfs" | "nodefs";
-  resourceRoot: string;
+  resourceProvider?: "webfs" | "nodefs";
+  resourceRoot?: string;
   KhaiiiOption?: any;
 };
 
 const RESOURCE_DIR = "/khaiii";
 
-async function initialize(config: KhaiiiConfig) {
+async function initialize(config?: KhaiiiConfig) {
   const Module = await libkhaiii();
   mkdirP(RESOURCE_DIR, Module.FS);
 
+  config = config || {};
+  if (!config.resourceProvider) {
+    console.warn(`[khaiii.js] No resource provider specified.`)
+    if (typeof(__non_webpack_require__) === 'function' && __non_webpack_require__('fs')) {
+      config.resourceProvider = 'nodefs';
+    } else if (typeof(window) !== 'undefined' && window.fetch) {
+      config.resourceProvider = 'webfs';
+    }
+    if (config.resourceProvider) {
+      console.warn(`[khaiii.js] Using detected provider: ${config.resourceProvider}`)
+    }
+  }
   switch (config.resourceProvider) {
     case "webfs":
       console.log(config.resourceRoot);
