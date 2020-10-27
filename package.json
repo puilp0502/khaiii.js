@@ -4,6 +4,7 @@
   "description": "WASM Port of khaiii, a Korean Morphological Analyzer",
   "scripts": {
     "build": "webpack",
+    "build-wasm": "scripts/build-libkhaiii.sh",
     "test": "npm run build && jest"
   },
   "main": "dist/khaiii.js",
