@@ -2,8 +2,6 @@ const path = require("path");
 const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
-  mode: "development",
-  devtool: "cheap-source-map",
   entry: "./src/index.ts",
   output: {
     path: path.resolve(__dirname, "./dist"),

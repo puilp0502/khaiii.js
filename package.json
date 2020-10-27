@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "WASM Port of khaiii, a Korean Morphological Analyzer",
   "scripts": {
-    "build": "webpack",
+    "build": "webpack --config webpack.prod.js",
     "build-wasm": "scripts/build-libkhaiii.sh",
     "test": "npm run build && jest"
   },
@@ -25,7 +25,8 @@
     "ts-loader": "^8.0.5",
     "typescript": "^4.0.3",
     "webpack": "5.x",
-    "webpack-cli": "^4.0.0"
+    "webpack-cli": "^4.0.0",
+    "webpack-merge": "^5.2.0"
   },
   "dependencies": {}
 }
