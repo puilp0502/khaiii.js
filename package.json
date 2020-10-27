@@ -1,6 +1,6 @@
 {
   "name": "khaiii",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "WASM Port of khaiii, a Korean Morphological Analyzer",
   "scripts": {
     "build": "webpack --config webpack.prod.js",
@@ -12,7 +12,7 @@
     "dist/"
   ],
   "author": "Frank Yang",
-  "license": "ISC",
+  "license": "Apache-2.0",
   "browserslist": "supports wasm and supports fetch, node 10",
   "devDependencies": {
     "@babel/preset-env": "^7.11.5",
